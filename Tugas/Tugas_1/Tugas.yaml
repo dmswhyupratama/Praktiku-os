@@ -1,0 +1,67 @@
+tugas:
+  nama: "Dimas Wahyu Pratama"
+  nim: "240202858"
+  mata_kuliah: "Sistem Operasi"
+  pertemuan: 4
+  deskripsi: "Output praktikum build dan run Docker container"
+  output_terminal: |
+    Microsoft Windows [Version 10.0.26100.3915]
+    (c) Microsoft Corporation. All rights reserved.
+
+    C:\Users\LENOVO>cd C:\Users\LENOVO\Downloads\Sistem Operasi\os-202402-main\pertemuan4
+
+    C:\Users\LENOVO\Downloads\Sistem Operasi\os-202402-main\pertemuan4>docker build -t praktikum-os240202858 .
+    [+] Building 83.2s (7/7) FINISHED                                                                  docker:desktop-linux
+      => [internal] load build definition from Dockerfile                                                               0.1s
+      => transferring dockerfile: 264B                                                                               0.1s
+      => WARN: ConsistentInstructionCasing: Command 'From' should match the case of the command majority (uppercase) (  0.1s
+      => WARN: ConsistentInstructionCasing: Command 'Run' should match the case of the command majority (uppercase) (l  0.1s
+      => [internal] load metadata for docker.io/library/ubuntu:22.04                                                    4.3s
+      => [auth] library/ubuntu:pull token for registry-1.docker.io                                                      0.0s
+      => [internal] load .dockerignore                                                                                  0.0s
+      => => transferring context: 2B                                                                                    0.0s
+      => [1/2] FROM docker.io/library/ubuntu:22.04@sha256:67cadaff1dca187079fce41360d5a7eb6f7dcd3745e53c79ad5efd85631  29.0s
+      => => resolve docker.io/library/ubuntu:22.04@sha256:67cadaff1dca187079fce41360d5a7eb6f7dcd3745e53c79ad5efd856311  0.0s
+      => => sha256:67cadaff1dca187079fce41360d5a7eb6f7dcd3745e53c79ad5efd8563118240 6.69kB / 6.69kB                     0.0s
+      => => sha256:899ec23064539c814a4dbbf98d4baf0e384e4394ebc8638bea7bbe4cb8ef4e12 424B / 424B                         0.0s
+      => => sha256:c42dedf797ba5e7e37e744cdd998e1db046375c702d6dc8a822b422189b019bb 2.30kB / 2.30kB                     0.0s
+      => => sha256:215ed5a638430309375291c48a01872859a8dbf1331e54ba0af221918eb8ce2e 29.53MB / 29.53MB                  27.9s
+      => => extracting sha256:215ed5a638430309375291c48a01872859a8dbf1331e54ba0af221918eb8ce2e                          0.9s
+      => [2/2] RUN apt-get update && apt-get install -y bash nano curl wget iputils-ping procps net-tools              49.5s
+      => exporting to image                                                                                             0.2s
+      => => exporting layers                                                                                            0.2s
+      => => writing image sha256:35478ff4a9f56064a8e8ee550ccf5399c2c3afce5b5e27c0d79f0f5e742d3967                       0.0s
+      => => naming to docker.io/library/praktikum-os240202858                                                           0.0s
+
+      View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/nvte2lp33t86p3p38aoeu91l0
+      2 warnings found (use docker --debug to expand):
+      - ConsistentInstructionCasing: Command 'From' should match the case of the command majority (uppercase) (line 2)
+      - ConsistentInstructionCasing: Command 'Run' should match the case of the command majority (uppercase) (line 5)
+
+     C:\Users\LENOVO\Downloads\Sistem Operasi\os-202402-main\pertemuan4>docker run -it --name praktikum-os240202858 praktikum-os240202858
+      root@05c6a1ced322:/# ls
+      bin  boot  dev  etc  home  lib  lib32  lib64  libx32  media  mnt  opt  proc  root  run  sbin  srv  sys  tmp  usr  var
+      root@05c6a1ced322:/# ls -l
+      total 56
+      lrwxrwxrwx   1 root root    7 Apr 15 14:03 bin -> usr/bin
+      drwxr-xr-x   2 root root 4096 Apr 18  2022 boot
+      drwxr-xr-x   5 root root  360 May  6 13:32 dev
+      drwxr-xr-x   1 root root 4096 May  6 13:32 etc
+      drwxr-xr-x   2 root root 4096 Apr 18  2022 home
+      lrwxrwxrwx   1 root root    7 Apr 15 14:03 lib -> usr/lib
+      lrwxrwxrwx   1 root root    9 Apr 15 14:03 lib32 -> usr/lib32
+      lrwxrwxrwx   1 root root    9 Apr 15 14:03 lib64 -> usr/lib64
+      lrwxrwxrwx   1 root root   10 Apr 15 14:03 libx32 -> usr/libx32
+      drwxr-xr-x   2 root root 4096 Apr 15 14:03 media
+      drwxr-xr-x   2 root root 4096 Apr 15 14:03 mnt
+      drwxr-xr-x   2 root root 4096 Apr 15 14:03 opt
+      dr-xr-xr-x 349 root root    0 May  6 13:32 proc
+      drwx------   2 root root 4096 Apr 15 14:10 root
+      drwxr-xr-x   5 root root 4096 Apr 15 14:10 run
+      lrwxrwxrwx   1 root root    8 Apr 15 14:03 sbin -> usr/sbin
+      drwxr-xr-x   2 root root 4096 Apr 15 14:03 srv
+      dr-xr-xr-x  11 root root    0 May  6 13:32 sys
+      drwxrwxrwt   1 root root 4096 May  6 13:32 tmp
+      drwxr-xr-x   1 root root 4096 Apr 15 14:03 usr
+      drwxr-xr-x   1 root root 4096 Apr 15 14:10 var
+      root@05c6a1ced322:/#
